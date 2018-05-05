@@ -11,17 +11,19 @@ Query(function($) {
     var roundedUp;
     var factPrice = `${data.factomPrice}`;
     var storjPrice = `${data.storjPrice}`;
+    var etheriumNeeded = `${data.gasPrice}`;
     var hercPrice = 0.60;
 
     var factNeeded = 0.000128 / factPrice;
     var storjNeeded = 0.0007032 / storjPrice;
+    var hercBurned = factNeeded/hercPrice;
 
     factNeeded = roundUp(factNeeded, 6);
     storjNeeded = roundUp(storjNeeded, 6);
 
     var hercNeededFCT = (0.000128 / 0.60) * factPrice;
     var hercNeededSTORJ = (0.0007032 / 0.60) * storjPrice;
-    var hercNeeded = ((storjNeeded/hercPrice) + (factoid))
+    var hercNeeded = ((storjNeeded/hercPrice) + (factNeeded/hercPrice)+(etheriumNeeded/hercPrice)+hercBurned);
 
     $("#factPrice").html(factPrice);
     $("#factPriceMobile").html(factPrice);
