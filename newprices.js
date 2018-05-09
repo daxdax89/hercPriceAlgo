@@ -1,4 +1,5 @@
-Query(function($) {
+<script>
+jQuery(function($) {
   function roundUp(num, precision) {
     precision = Math.pow(10, precision)
     return Math.ceil(num * precision) / precision
@@ -37,9 +38,20 @@ Query(function($) {
     $("#storjNeeded").html(storjNeeded);
     $("#storjNeededMobile").html(storjNeeded);
 
+    $("#ethGasPrice").html(etheriumNeeded);
+	      $("#ethGasPrice2").html(etheriumNeeded);
+    $("#ethGasPrice3").html(etheriumNeeded);
+
+
     $("#hercNeeded").html(hercNeededFCT);
     $("#hercNeeded2").html(hercNeededSTORJ);
     $("#hercNeededMobile").html(hercNeededFCT);
     $("#hercNeededMobile2").html(hercNeededSTORJ);
+    $("#ethGasPriceMobile").html(etheriumNeeded);
+	      $("#ethGasPriceMobile2").html(etheriumNeeded);
+    $("#ethGasPriceMobile3").html(etheriumNeeded);
+
   });
 });
+
+</script>
